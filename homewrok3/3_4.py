@@ -1,15 +1,16 @@
 password = input()
 
-while password.isdigit():
+if password.isdigit():
     
     for i in range(1,6):
-        if int(password[i]) == int(str((int(password[i-1])+1)**3)[-1]):
-            a="right"    
-        else:
+        if int(password[i]) != (int(password[i-1])+1)**3 % 10: 
             a="wrong"
+            break    
+        else:
+            a="right"
 
     print(a)
-    break
+    
 
 else:
     print("wrong")
