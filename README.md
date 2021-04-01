@@ -1,7 +1,7 @@
 # Homework-of-Pyhton 
 2021-春-应化专业-Python语言程序设计作业、
 
-- 作业1 [编程基础和顺序结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework1)
+## 作业1 [编程基础和顺序结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework1)
 >>1.Hello World程序
 ```python
     print("Hello World!")
@@ -39,7 +39,7 @@ c = num % 10
 print(c*100 + b*10 + a)
 ```
     
-- 作业2 [条件](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework2)
+## 作业2 [条件](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework2)
 >> 1.输入整数x,y,z,判断x^3+y^3+z^3和1000的关系
 ```python
 x,y,z = eval(input("please input three numbers:"))
@@ -114,7 +114,7 @@ else:
     else:
         print(28) 
 ```
-- 实验1 [条件P1](https://github.com/Xsjerry/Homework-of-Python/tree/main/experiment1)
+## 实验1 [条件P1](https://github.com/Xsjerry/Homework-of-Python/tree/main/experiment1)
 >> 1.停车费
 ```python
 import math
@@ -150,7 +150,7 @@ else:
     print("false")
 ```
 
-- 作业3 [循环结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/homewrok3)
+## 作业3 [循环结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/homewrok3)
 > 编程题
 >> 1.随机密码
 ```python
