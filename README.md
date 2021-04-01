@@ -1,26 +1,26 @@
 # Homework-of-Pyhton 
 2021-春-应化专业-Python语言程序设计作业、
 
--> 作业1 [编程基础和顺序结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework1)
->> 1.Hello World程序
-    print("Hello World!")
+- 作业1 [编程基础和顺序结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework1)
+>>1.Hello World程序
+`print("Hello World!")`
 >> 2.变量
-    m = 100
+``` m = 100
     n = 13.14
     print(m)
-    print(n)
+    print(n)```
 >> 3.编写程序计算下列数学表达式的结果并输出
-    from math import sqrt
+    ```from math import sqrt
     x = sqrt((3**4 + 5 * 6**7)/8)
-    print("{0:<9.3f}".format(x))
+    print("{0:<9.3f}".format(x))```
 >> 4.计算圆周长和圆面积
-    import math
+```    import math
     r = int(input("Please enter radium:"))
     c = 2 * math.pi * r
     s = math.pi * r**2
-    print("Circumference is %.2f\nRound area is %.2f"%(c, s))
+    print("Circumference is %.2f\nRound area is %.2f"%(c, s))```
 >> 5.3位整数逆序
-'''python
+'''
 '''   num = input()
       print(num[::-1]) 
 '''
