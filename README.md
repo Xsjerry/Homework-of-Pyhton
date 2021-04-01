@@ -8,35 +8,35 @@
 ```
 >> 2.变量
 ```python
-    m = 100
-    n = 13.14
-    print(m)
-    print(n)
+m = 100
+n = 13.14
+print(m)
+print(n)
 ```
 >> 3.编写程序计算下列数学表达式的结果并输出
 ```python
-    from math import sqrt
-    x = sqrt((3**4 + 5 * 6**7)/8)
-    print("{0:<9.3f}".format(x))
+from math import sqrt
+x = sqrt((3**4 + 5 * 6**7)/8)
+print("{0:<9.3f}".format(x))
 ```
 >> 4.计算圆周长和圆面积
 ```python
-    import math
-    r = int(input("Please enter radium:"))
-    c = 2 * math.pi * r
-    s = math.pi * r**2
-    print("Circumference is %.2f\nRound area is %.2f"%(c, s))
+import math
+r = int(input("Please enter radium:"))
+c = 2 * math.pi * r
+s = math.pi * r**2
+print("Circumference is %.2f\nRound area is %.2f"%(c, s))
 ```
 >> 5.3位整数逆序
 ```python
-    #num = input()
-    #print(num[::-1]) 使用字符串切片方法
+#num = input()
+#print(num[::-1]) 使用字符串切片方法
     
-    num = int(input())
-    a = num // 100
-    b = num % 100 // 10
-    c = num % 10
-    print(c*100 + b*10 + a)
+num = int(input())
+a = num // 100
+b = num % 100 // 10
+c = num % 10
+print(c*100 + b*10 + a)
 ```
     
 - 作业2 [条件](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework2)
@@ -176,7 +176,7 @@ while y < 3:
         break
 #如果不加if条件进行判断的话，最后结果会输出57，3.00
 #原因是在最后一次进行判断 y<3 后，n会+1
-# 所以我们要在倒数第二次循环后就推出循环   
+#所以我们要在倒数第二次循环后就推出循环   
 print("n=%d,y=%.2f"%(n,y))
 ```
 >> 3.小玉游泳
