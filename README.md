@@ -4,7 +4,7 @@
 ## 作业1 [编程基础和顺序结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework1)
 >>1.Hello World程序
 ```python
-    print("Hello World!")
+print("Hello World!")
 ```
 >> 2.变量
 ```python
