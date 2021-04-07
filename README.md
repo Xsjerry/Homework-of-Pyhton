@@ -211,5 +211,80 @@ else:
     print("wrong")
 
 ```
+## 实验1:[条件P2](https://github.com/Xsjerry/Homework-of-Python/tree/main/experiment1_P2)
+>> 1.判断该字符是字母字符、数字字符还是其他字符
+```python
+ch = input("please input a char:")
+if 'a'<= ch <='z' or 'A' <= ch <= 'Z':
+    print("alphabet character")
+elif '1' <= ch <= '9':
+    print("digital character")
+else:
+    print("others character")
+```
 
+>> 2.判断一个3位数是否是水仙花数。
+```python
+num = eval(input("please input a three-digit number:"))
+a = num // 100
+b = num % 100 // 10
+c = num % 10
+if 100 <= num <1000:
+    if num == pow(a,3) + pow(b,3) + pow(c,3):
+        print("true")
+    else:
+        print("false")
+else:
+    print("error")
+```
+
+>> 3.录取研究生
+```python
+a,b,c,d = eval(input("four scores:"))
+if a>60 and b>60 and c>60 and d>60 and a+b+c+d>=370:
+    print("free")
+elif a>60 and b>60 and c>60 and d>60 and 340 <= a+b+c+d <=370:
+    print("pay")
+else:
+    print("not") 
+```
+## 实验2：[循环结构](https://github.com/Xsjerry/Homework-of-Python/tree/main/experiment2)
+
+>> 1.小鱼的航程
+```python
+# 有一只小鱼，它上午游泳150公里，下午游泳100公里，
+# 晚上和周末都休息（实行双休日)，
+# 假设从周x(1<=x<=7)开始算起，请问这样过了n天以后，
+# 小鱼一共累计游泳了多少公里呢？
+s = input()
+a,b = s.split(" ")
+x = int(a) #周X开始
+n = int(b) #过了n天以后
+
+distance = 0    #初始为0
+for i in range(x,x+n):  #抛弃传统的周一到周七，假设周七过后是周八，以次类推，周十三就是周六，周十四就是周天
+    if i % 7 != 0 and i % 7 != 6:   # 如果在n天内遇到了周末就不加，否则就加250
+        distance += 250        
+print(distance)
+```
+
+>> 2.Python 小球反弹
+```python
+#已知一球从高空落下时，每次落地后反弹至原高度的四分之一再落下。
+# 编写一程序，从键盘输入整数n和m，
+# 求该球从n米的高空落下后，
+# 第m次落地时共经过的路程以及第m次落地后反弹的高度，
+# 并输出结果。
+n = int(input()) #从n米高的高空
+m = int(input()) #落地m次
+d = 0 #初始距离
+for i in range(m):
+    d += n  #下落过程加距离加n
+    n *= 0.25  #n落地后的反弹的高度
+    d += n  #落地后反弹距离再加 n，注意此时球在空中
+#循环结束
+d = d-n #因为本题要求的是球落地时的距离，所以需要减去最后一次反弹的距离
+print("%.2f"%d)
+print("%.2f"%n)
+```
 
