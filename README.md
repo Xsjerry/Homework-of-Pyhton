@@ -287,4 +287,92 @@ d = d-n #因为本题要求的是球落地时的距离，所以需要减去最�
 print("%.2f"%d)
 print("%.2f"%n)
 ```
+## 作业4:[循环与组合数据类型](https://github.com/Xsjerry/Homework-of-Python/tree/main/homework4)
 
+>> 1.世界杯官网注册\
+```python
+# 网站注册时要求用户名只能包含字母、数字和下划线，
+# 并且首字符必须是字母或下划线。
+# 在计算机中编写程序判断输入的用户名是否符合该旅游网站要求，
+# 如果符合，请输出“Yes”，否则输出“No”。
+
+name = input()
+if 'a' <= name[0] <= 'z' or 'A' <= name[0] <= 'Z' or name[0] == "_":
+    for i in name:
+        if not ('a' <= i <= 'z' or 'A' <= i <= 'Z' or i == "_" or '0' <= i <= '9'):
+            x = "No"
+            break
+        else:
+            x = "Yes"
+    print(x)
+else:
+    print("No") 
+```
+>> 2.高校类型统计
+```python
+#列表 ls 中存储了我国 39 所 985 高校所对应的学校类型，
+# 请以这个列表为数据变量，编写 代码，统计输出各类型的数量，
+# 要求按类别字母顺序输出。
+ls = ["Comprehensive", "Polytechnic", "Comprehensive", "Comprehensive", "Comprehensive", \
+
+      "Comprehensive", "Comprehensive", "Comprehensive", "Comprehensive", "Comprehensive",\
+
+      "Normal", "Polytechnic", "Comprehensive", "Polytechnic", "Comprehensive", "Comprehensive", \
+
+      "Comprehensive", "Comprehensive", "Comprehensive","Polytechnic",\
+
+      "Polytechnic", "Polytechnic", "Polytechnic", "Normal", "Comprehensive", \
+
+      "Agricultural and Forestry", "Polytechnic", "Comprehensive", "Polytechnic", "Polytechnic", \
+
+      "Polytechnic", "Comprehensive", "Polytechnic", "Comprehensive", "Comprehensive", \
+
+      "Polytechnic", "Agricultural and Forestry", "Nationalities", "Military"]
+a,c,m,p,n1,n2 = 0,0,0,0,0,0 #取各名称的首字母代表
+for i in ls:
+    if i[0] == "A":
+        a += 1
+    elif i[0] == 'C':
+        c += 1
+    elif i[0] == 'M':
+        m += 1
+    elif i[0] == 'P':
+        p += 1
+    else:
+        if i == 'Normal':
+            n1 += 1
+        else:
+            n2 += 1
+print("Agricultural and Forestry %d"%a)
+print("Comprehensive %d"%c)
+print("Military %d"%m)
+print("Nationalities %d"%n2)
+print("Normal %d"%n1)
+print("Polytechnic %d"%p)
+```
+>> 3.ISBN校验码判断
+```python
+isbn = input() #获得输入以字符串形式
+
+num = isbn.replace('-', '') #将'-'替换为''
+
+sum = 0 #定义初始和为0
+for i in range(1,len(num)):
+    if i % 2 == 0: #求偶数位
+        sum += int(num[i-1])*3
+    else: #求奇数位
+        sum += int(num[i-1])*1
+
+yu = sum % 10 #余数
+he = 10 - yu  #稽核号
+if he == 10:
+    he = 0
+else:
+    he = 10 - yu
+
+
+if he == int(num[-1]):
+    print("Right")
+else:
+    print(isbn[0:-1]+"%d"%he)
+```
