@@ -398,7 +398,7 @@ else:
     print("FALSE")
 ```
 >> 2.解密码
-![ASCII码表(节选)](hexo/ASCII码表.jpg)
+
 ```python
 x = input()
 y = ''
