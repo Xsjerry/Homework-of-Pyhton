@@ -376,4 +376,41 @@ if he == int(num[-1]):
 else:
     print(isbn[0:-1]+"%d"%he)
 ```
-## experiment3
+## 实验3:[循环与组合数据类型P1](https://github.com/xsjerry/Homework-of-Python/tree/main/experiment3)
+>> 1.11整除问题改
+```python
+x = input("Please input a integer:")
+y = x[::-1]
+sumji = 0
+sumou = 0
+for i in range(len(x)):
+    if i % 2 == 0:
+        sumji += int(y[i])
+    else:
+        sumou += int(y[i])
+   
+print(sumji)
+print(sumou)
+
+if (sumji - sumou) % 11 == 0:
+    print("TRUE")
+else:
+    print("FALSE")
+```
+>> 2.解密码
+![ASCII码表(节选)](hexo/ASCII码表.jpg)
+```python
+x = input()
+y = ''
+
+for i in x:
+    if 'a' <= i <= 'z':
+        y = y + chr(96+27-(ord(i)-96))
+    elif 'A' <= i <= 'Z':
+        y = y + chr(64+27-(ord(i)-64))
+    else:
+        y = y + i
+
+print(x)
+print(y)
+```
